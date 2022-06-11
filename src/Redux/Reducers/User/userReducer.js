@@ -8,36 +8,36 @@ const initialState = {
   },
 };
 
-const userReducer = (initialState, action) => {
+const userReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'setId':
       return {
-        ...initialState,
+        ...state,
         uid: action.id,
       };
 
     case 'setUserName':
       return {
-        ...initialState,
+        ...state,
         userName: action.uname,
       };
 
     case 'setUserData':
       const {userName, uid} = action.data;
       return {
-        ...initialState,
+        ...state,
         uid: uid,
         userName: userName,
       };
 
     case 'setIsUserLogin':
       return {
-        ...initialState,
+        ...state,
         isUserLogin: action.isUserAuthenticate,
       };
 
     default:
-      return initialState;
+      return state;
   }
 };
 

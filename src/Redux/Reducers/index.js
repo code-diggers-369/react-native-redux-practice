@@ -9,6 +9,8 @@ const rootReducer = combineReducers({
   user: UserReducer,
 });
 
+export default rootReducer;
+
 // const rootReducer = {
 //   counter: {
 //     count: 0,

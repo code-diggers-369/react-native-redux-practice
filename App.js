@@ -1,17 +1,14 @@
+import React from 'react';
 import {View, Text} from 'react-native';
-import React, {useState} from 'react';
+import {Provider} from 'react-redux';
 
-//
-import CounterScreen from './src/screens/CounterScreen';
-import CounterCustomSet from './src/componets/CounterCustomSet';
+// import store
+import {store} from './src/Redux/store';
 
 export default function App() {
-  const [customValueParentState, setCustomValueParentState] = useState(1);
-
   return (
-    <View style={{flex: 1}}>
-      <CounterScreen customValueParentState={customValueParentState} />
-      <CounterCustomSet setCustomValueParentState={setCustomValueParentState} />
-    </View>
+    <Provider store={store}>
+      <Text>Hello World</Text>
+    </Provider>
   );
 }
