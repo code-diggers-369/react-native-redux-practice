@@ -1,20 +1,9 @@
 import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-export default function CounterControllers({
-  setCounterValue,
-  customValueParentState,
-}) {
-  const incrementValue = () => {
-    setCounterValue(tempValue => {
-      return parseInt(tempValue) + parseInt(customValueParentState);
-    });
-  };
-  const decrementValue = () => {
-    setCounterValue(tempValue => {
-      return tempValue - customValueParentState;
-    });
-  };
+export default function CounterControllers({}) {
+  const incrementValue = () => {};
+  const decrementValue = () => {};
   return (
     <View
       style={{

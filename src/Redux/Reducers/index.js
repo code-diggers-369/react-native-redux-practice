@@ -29,3 +29,14 @@ export default rootReducer;
 // };
 
 // rootReducer.counter.count
+
+// const data = {
+//   counter: {count: 0, length: 10, maxCount: 100},
+//   user: {
+//     hobby: [],
+//     isUserLogin: false,
+//     moreData: {city: ''},
+//     uid: '',
+//     userName: '',
+//   },
+// };

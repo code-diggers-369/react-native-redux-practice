@@ -2,6 +2,7 @@ const initialState = {
   count: 0,
   length: 10,
   maxCount: 100,
+  changeValue: 1,
 };
 
 const counterReducer = (state = initialState, action) => {

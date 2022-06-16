@@ -1,6 +1,9 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {Provider} from 'react-redux';
+
+//
+import Home from './src/screens/Home';
+import CounterScreen from './src/screens/CounterScreen';
 
 // import store
 import {store} from './src/Redux/store';
@@ -8,7 +11,8 @@ import {store} from './src/Redux/store';
 export default function App() {
   return (
     <Provider store={store}>
-      <Text>Hello World</Text>
+      {/* <Home /> */}
+      <CounterScreen />
     </Provider>
   );
 }
