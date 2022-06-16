@@ -1,9 +1,16 @@
 import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
+import {useDispatch} from 'react-redux';
 
 export default function CounterControllers({}) {
-  const incrementValue = () => {};
-  const decrementValue = () => {};
+  const dispatch = useDispatch();
+
+  const incrementValue = () => {
+    dispatch({type: 'increment'});
+  };
+  const decrementValue = () => {
+    dispatch({type: 'decrement'});
+  };
   return (
     <View
       style={{
