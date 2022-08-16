@@ -2,14 +2,23 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {useDispatch} from 'react-redux';
 
+// import actions for redux
+import {
+  // decrementValueAction,
+  // incrementValueAction,
+  incrementDecrementValueAction,
+} from '../Redux/Actions/Counter/counterActions';
+
 export default function CounterControllers({}) {
   const dispatch = useDispatch();
 
   const incrementValue = () => {
-    dispatch({type: 'increment'});
+    // dispatch(incrementValueAction());
+    dispatch(incrementDecrementValueAction('increment'));
   };
   const decrementValue = () => {
-    dispatch({type: 'decrement'});
+    // dispatch(decrementValueAction());
+    dispatch(incrementDecrementValueAction('decrement'));
   };
   return (
     <View

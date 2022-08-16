@@ -8,6 +8,9 @@ import {useSelector, useDispatch} from 'react-redux';
 import CounterView from '../componets/CounterView';
 import CounterControllers from '../componets/CounterControllers';
 
+//
+import {setCustomValueAction} from '../Redux/Actions/Counter/counterActions';
+
 export default function CounterScreen({customValueParentState}) {
   const counter = useSelector(state => state.counter);
   const dispatch = useDispatch();
@@ -21,7 +24,7 @@ export default function CounterScreen({customValueParentState}) {
       <TextInput
         value={counter.changeValue}
         style={{borderWidth: 1, width: '80%', marginTop: 30}}
-        onChangeText={text => dispatch({type: 'changeValue', payload: text})}
+        onChangeText={text => dispatch(setCustomValueAction(text))}
       />
     </View>
   );
